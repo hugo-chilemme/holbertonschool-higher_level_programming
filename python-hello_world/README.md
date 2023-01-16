@@ -13,3 +13,6 @@
 - [10. Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.](100-write.py)
 - [11. Write a script that compiles a Python script file.](101-compile)
 - [12. Write the Python function def magic_calculation(a, b): that does exactly the same as the following Python bytecode:](102-magic_calculation.py)
+```py
+def magic_calculation(a, b):
+```
