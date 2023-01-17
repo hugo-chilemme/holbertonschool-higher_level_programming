@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import statistics  
+import statistics
 import hidden_4
 
 if __name__ == "__main__":
