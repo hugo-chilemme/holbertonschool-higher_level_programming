@@ -4,17 +4,17 @@ from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
     if len(argv) == 4:
-        operator = argv[2]
-        if operator == "+" or operator == "-" or operator == "/" or operator == "*":
+        op = argv[2]
+        if op == "+" or op == "-" or op == "/" or op == "*":
             a = int(argv[1])
             b = int(argv[3])
-            if operator == "+":
+            if op == "+":
                 print("{} + {} = {}".format(a, b, add(a, b)))
-            elif operator == "-":
+            elif op == "-":
                 print("{} - {} = {}".format(a, b, sub(a, b)))
-            elif operator == "/":
+            elif op == "/":
                 print("{} / {} = {}".format(a, b, div(a, b)))
-            elif operator == "*":
+            elif op == "*":
                 print("{} * {} = {}".format(a, b, mul(a, b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
