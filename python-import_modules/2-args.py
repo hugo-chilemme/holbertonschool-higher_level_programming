@@ -11,4 +11,5 @@ if __name__ == "__main__":
     for arg in sys.argv:
         num += 1
         if num > 1:
-            print("{}: {}".format(num, arg))
+            print("{}: {}".format(num - 1, arg))
+        
