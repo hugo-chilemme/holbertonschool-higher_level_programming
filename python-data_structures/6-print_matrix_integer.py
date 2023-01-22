@@ -7,5 +7,5 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(y), end=" ")
             else:
                 print("{:d}".format(y), end="")
-            i+=1
+            i += 1
         print("")
