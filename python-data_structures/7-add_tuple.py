@@ -4,15 +4,14 @@ def add_tuple(tuple_a=(), tuple_b=()):
     
     j = 0
     for num in tuple_a:
-        if new_tuple[j]:
+        if j < len(new_tuple):
             new_tuple[j] += num;
         j += 1
         
     j = 0
     for num in tuple_b:
-        if new_tuple[j]:
+        if j < len(new_tuple):
             new_tuple[j] += num;
         j += 1
         
     return tuple(new_tuple)
-c
