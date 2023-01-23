@@ -1,2 +1,6 @@
 #!/usr/bin/python3
-def add_tuple(tuple_a=(), tuple_b=()):
+def multiple_returns(sentence):
+    first_letter = None
+    if sentence[0]:
+        first_letter = sentence[0]
+    return len(sentence), first_letter
