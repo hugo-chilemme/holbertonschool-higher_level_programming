@@ -9,14 +9,14 @@ def roman_to_int(roman_string):
         "D": 500,
         "M": 1000
     }
-    if roman_string is None:
-        return None
+    if roman_string is None or type(roman_string) != str:
+        return 0
     roman_number = 0
     last_number = None
     for letter in roman_string:
         if roman_manuals[letter]:
             if last_number and last_number < roman_manuals[letter]:
-                roman_number += (roman_manuals[letter] - (last_number + 1))
+                roman_number += roman_manuals[letter] - (last_number * 2)
             else:
                 roman_number += roman_manuals[letter]
             last_number = roman_manuals[letter]
