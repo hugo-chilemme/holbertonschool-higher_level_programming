@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    new_list = []
+    redlist = [];
+    for num in my_list:
+        find = False
+        for val in redlist:
+            if val == num:
+                find = True
+        
+        if find is False:
+            redlist.append(num)
     res = 0
-    for i in my_list:
-        in_array = False
-        for i, val in enumerate(new_list):
-            if val == i:
-                in_array = True
-        if in_array == False:
-            res += i
-            new_list.append(i)
-    return res - 1
-
+    for val in redlist:
+        res += val
+    return res
