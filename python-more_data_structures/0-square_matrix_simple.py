@@ -6,7 +6,7 @@ def square_matrix_simple(matrix=[]):
         j = 0
         string += "["
         for x in y:
-            string += str(x)
+            string += str(x ** 2)
             if j < len(y) - 1:
                 string += ", "
             j += 1
