@@ -10,11 +10,9 @@ def square_matrix_simple(matrix=[]):
             if j < len(y) - 1:
                 string += ", "
             j += 1
-            
         string += "]"
         if i < len(matrix) - 1:
             string += ", "
         i += 1
-        
     string += "]"
     return string
