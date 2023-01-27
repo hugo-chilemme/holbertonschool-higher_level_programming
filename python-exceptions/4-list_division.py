@@ -3,14 +3,14 @@ def list_division(my_list_1, my_list_2, list_length):
     list = []
     for i in range(0, list_length):
         Result = 0
-        try: 
+        try:
             element_1 = my_list_1[i]
             element_2 = my_list_2[i]
             if element_2 == 0:
                 print("division by 0")
                 Result = 0
             else:
-                try: 
+                try:
                     Result = element_1 / element_2
                 except:
                     print("wrong type")
