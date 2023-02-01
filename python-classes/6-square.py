@@ -40,7 +40,6 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             return print()
-        
         for space in range(0, self.__position[1]):
             print("")
         for y in range(0, self.__size):
