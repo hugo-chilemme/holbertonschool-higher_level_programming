@@ -5,7 +5,7 @@
 class Square:
     """Init Square"""
     def __init__(self, size=0):
-       self.size = size
+        self.size = size
 
     def area(self):
         return self.__size ** 2
@@ -13,7 +13,7 @@ class Square:
     @property
     def size(self):
         return self.__size
-    
+
     @size.setter
     def size(self, value):
         if type(value) is not int:
