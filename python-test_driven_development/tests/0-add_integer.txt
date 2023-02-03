@@ -8,10 +8,20 @@ Now use it:
     >>> add_integer(3)
     101
 
-    >>> add_integer(3, "school")
-    Traceback (most recent call last):
-    TypeError: b must be an integer
+    >>> add_integer(3)
+    101
 
-    >>> add_integer("school")
-    Traceback (most recent call last):
-    TypeError: a must be an integer
+    >>> add_integer(3, "school")
+    TypeError('b must be an integer')
+
+    >>> add_integer(3.14)
+    101
+
+    >>> add_integer(3.14, 2.0)
+    5
+
+    >>> add_integer(3, 2.0)
+    5
+
+    >>> add_integer(3.7, "school")
+    TypeError('b must be an integer')
