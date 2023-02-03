@@ -2,7 +2,7 @@
 """matrix_divided"""
 
 
-def matrix_divided(matrix, div=1):
+def matrix_divided(matrix=[], div=1):
     """Return new matrix with value divided by @div"""
     if not isinstance(div, (int, float)) or div is None:
         raise TypeError("div must be a number")
