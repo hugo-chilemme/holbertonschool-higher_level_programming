@@ -2,9 +2,9 @@
 """matrix_divided"""
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix, div=1):
     """Return new matrix with value divided by @div"""
-    if not isinstance(div, (int, float)):
+    if not isinstance(div, (int, float)) or div is None:
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
