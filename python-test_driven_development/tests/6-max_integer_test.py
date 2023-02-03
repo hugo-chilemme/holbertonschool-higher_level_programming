@@ -14,14 +14,11 @@ class TestMaxInteger(unittest.TestCase):
     def test_with_one(self):
         self.assertAlmostEqual(max_integer([1]), 1)
 
-    def text_first_value(self):
-        self.assertAlmostEqual(max_integer([3, 2, 1]), 1)
+    def test_with_begin(self):
+        self.assertAlmostEqual(max_integer([3, 2, 1]), 3)
 
-    def text_second_value(self):
-        self.assertAlmostEqual(max_integer([2, 3, 1]), 1)
-
-    def text_last_value(self):
-        self.assertAlmostEqual(max_integer([2, 1, 3]), 1)
+    def test_with_middle(self):
+        self.assertAlmostEqual(max_integer([2, 3, 1]), 3)
 
 
 if __name__ == '__main__':
