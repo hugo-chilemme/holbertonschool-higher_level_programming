@@ -7,11 +7,15 @@ def text_indentation(text):
     if type(text) is not str:
         raise TypeError("text must be a string")
     
+    new_line = False
     for k, v in enumerate(text):
         if k > 0:
             before = text[k - 1]
             if before in [".", "?", ":"]:
                 print("\n")
+                new_line = True
                 if v == ' ':
                     continue
+        if new_line and v == ' ':
+            continue
         print(v, end="")
