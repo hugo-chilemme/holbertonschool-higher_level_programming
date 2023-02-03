@@ -10,6 +10,6 @@ def print_square(size):
         raise ValueError("size must be >= 0")
 
     for y in range(0, size):
-        for x in range(0, size): 
+        for x in range(0, size):
             print("#", end="")
         print()
