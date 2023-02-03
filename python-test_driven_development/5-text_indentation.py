@@ -19,3 +19,4 @@ def text_indentation(text):
         if new_line and v == ' ':
             continue
         print(v, end="")
+        new_line = False
