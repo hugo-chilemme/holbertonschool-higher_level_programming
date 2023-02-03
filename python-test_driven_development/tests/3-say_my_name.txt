@@ -15,3 +15,6 @@ Now use it:
     >>> say_my_name("Hugo", 13)
     Traceback (most recent call last):
     TypeError: last_name must be a string
+
+    >>> say_my_name()
+    My name is  
