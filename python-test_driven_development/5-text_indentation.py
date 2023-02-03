@@ -12,5 +12,6 @@ def text_indentation(text):
             before = text[k - 1]
             if before in [".", "?", ":"]:
                 print("\n")
-                continue
+                if v == ' ':
+                    continue
         print(v, end="")
