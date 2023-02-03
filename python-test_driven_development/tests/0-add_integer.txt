@@ -1,1 +1,17 @@
+>>> add_integer = __import__('0-add_integer').add_integer
 
+Now use it:
+
+    >>> add_integer(3, 8)
+    11
+
+    >>> add_integer(3)
+    101
+
+    >>> add_integer(3, "school")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("school")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
