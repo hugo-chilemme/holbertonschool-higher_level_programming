@@ -1,0 +1,32 @@
+# Python - Everything is object
+
+- 0\. Quelle fonction utiliseriez-vous pour imprimer le type d’un objet ?
+- 1\. Comment obtenez-vous l’identifiant de variable (qui est l’adresse mémoire dans l’implémentation CPython)?
+- 2\. Dans le code suivant, faire et pointer vers le même objet ? Répondez par ou .abYesNo
+- 3\. Dans le code suivant, faire et pointer vers le même objet ? Répondez par ou .abYesNo
+- 4\. Dans le code suivant, faire et pointer vers le même objet ? Répondez par ou .abYesNo
+- 5\. Dans le code suivant, faire et pointer vers le même objet ? Répondez par ou .abYesNo
+- 6\. Qu’est-ce que ces 3 lignes impriment?
+- 7\. Qu’est-ce que ces 3 lignes impriment?
+- 8\. Qu’est-ce que ces 3 lignes impriment?
+- 9\. Qu’est-ce que ces 3 lignes impriment?
+- 10\. Qu’est-ce que ces 3 lignes impriment?
+- 11\. Qu’est-ce que ces 3 lignes impriment?
+- 12\. Qu’est-ce que ces 3 lignes impriment?
+- 13\. Qu’est-ce que ces 3 lignes impriment?
+- 14\. Qu’est-ce que ce script imprime?
+- 15\. Qu’est-ce que ce script imprime?
+- 16\. Qu’est-ce que ce script imprime?
+- 17\. Qu’est-ce que ce script imprime?
+- 18\. Qu’est-ce que ce script imprime?
+- 19\. Écrivez une fonction qui retourne une copie d’une liste.def copy_list(a_list):
+- 20\. Est-ce un tuple? Répondez par ou .aYesNo
+- 21\. Est-ce un tuple? Répondez par ou .aYesNo
+- [22. Est-ce un tuple? Répondez par ou .aYesNo](22-answer.txt)
+- [23. Is a tuple? Answer with or .aYesNo](23-answer.txt)
+- [24. What does this script print?](24-answer.txt)
+- [25. What does this script print?](25-answer.txt)
+- [26. What does this script print?](26-answer.txt)
+- [27. Will the last line of this script print ? Answer with or .139926795932424YesNo](27-answer.txt)
+- [28. Will the last line of this script print ? Answer with or .139926795932424YesNo](28-answer.txt)
+- 29\. Write a blog post about everything you just learned / this project is covering. Your blog post should be articulated this way (one paragraph per item):
