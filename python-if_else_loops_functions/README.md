@@ -36,3 +36,11 @@
 ```py
  def fizzbuzz():
 ```
+
+- [13. Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.](100-print_tebahpla.py)
+- [14. Write a function that creates a copy of the string, removing the character at the position n (not the Python way, the “C array index”).](101-remove_char_at.py)
+```py
+ def remove_char_at(str, n):
+```
+
+- [15. Write the Python function def magic_calculation(a, b, c): that does exactly the same as the following Python bytecode:](102-magic_calculation.py)
