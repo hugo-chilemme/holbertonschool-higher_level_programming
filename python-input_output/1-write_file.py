@@ -4,7 +4,9 @@
 
 def write_file(filename="", text=""):
     """function that writes a string to a text file (UTF8)"""
-    f = open(filename, "a")
-    f.write(text)
-    f.close()
-    return len(f.read())
+    with open(filename) as f:
+        f.write(text)
+        length = len(f.read())
+        f.close()
+        return length
+
