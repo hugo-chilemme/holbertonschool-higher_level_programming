@@ -7,10 +7,6 @@ def append_write(filename="", text=""):
     with open(filename, "a") as myfile:
         myfile.write(text)
         length = len(text)
-        try:
-            length += myfile.readlines()
-        except:
-            pass
         myfile.close()
         return length
     return 0
