@@ -8,5 +8,4 @@ def append_write(filename="", text=""):
     with open(filename, "a") as myfile:
         length = myfile.write(text)
         myfile.close()
-        return length
-    return 0
+    return length
