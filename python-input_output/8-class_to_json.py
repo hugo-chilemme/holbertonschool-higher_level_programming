@@ -7,8 +7,8 @@ def class_to_json(obj):
     json = {}
     if obj is None:
         return json
-    if obj.name is not None:
+    if obj.name:
         json["name"] = obj.name
-    if obj.number is not None:
+    if obj.number:
         json["number"] = obj.number
     return json
