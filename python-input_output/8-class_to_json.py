@@ -4,7 +4,9 @@
 
 def class_to_json(obj):
     """that returns the dictionary description with simple data structure"""
-    return {
-        "name": obj.name,
-        "number": obj.number
-    }
+    json = {}
+    if obj.name is not None:
+        json["name"] = obj.name
+    if obj.number is not None:
+        json["number"] = obj.number
+    return json
