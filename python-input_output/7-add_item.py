@@ -20,5 +20,4 @@ except:
 
 for value in arguments:
     datas.append(value)
-    
 save_to_json_file(datas, filename)
