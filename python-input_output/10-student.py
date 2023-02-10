@@ -13,6 +13,6 @@ class Student:
         keys = ["first_name", "last_name", "age"]
         json = {}
         for element in keys:
-            if not attrs or element in attrs:
+            if attrs is None or element in attrs:
                 json[element] = vars(self)["_Student__"+element]
         return json
