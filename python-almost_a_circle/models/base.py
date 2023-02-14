@@ -18,6 +18,7 @@ class Base:
             self.id = id
 
     def to_json_string(list_dictionaries):
+        """Convert object to json"""
         if not list_dictionaries or len(list_dictionaries) == 0 or type(list_dictionaries) is not list:
             return "[]"
         return dumps(list_dictionaries)
