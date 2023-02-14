@@ -69,6 +69,7 @@ class Rectangle(Base):
                 self.id = v
 
     def to_dictionary(self):
+        """Create object data"""
         obj = {
             "id": self.id,
             "width": self.width,
