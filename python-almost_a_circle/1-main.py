@@ -7,23 +7,22 @@ if r is None:
     print("Can't create Rectangle")
     exit(1)
 
-if r._Rectangle__height != 14:
-    print("Wrong private height: {}".format(r._Rectangle__height))
+if r._Rectangle__x != 4:
+    print("Wrong private x: {}".format(r._Rectangle__x))
     exit(1)
 
-print(r.height)
-if r.height != 14:
-    print("Wrong height getter: {}".format(r._Rectangle__height))
+if r.x != 4:
+    print("Wrong x getter: {}".format(r._Rectangle__x))
     exit(1)
 
-r.height = 5
+r.x = 5
 
-if r._Rectangle__height != 5:
-    print("Wrong private height: {}".format(r._Rectangle__height))
+if r._Rectangle__x != 5:
+    print("Wrong private x: {}".format(r._Rectangle__x))
     exit(1)
 
-if r.height != 5:
-    print("Wrong height getter: {}".format(r._Rectangle__height))
+if r.x != 5:
+    print("Wrong x getter: {}".format(r._Rectangle__x))
     exit(1)
 
 print("OK", end="")
