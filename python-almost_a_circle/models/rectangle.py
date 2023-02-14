@@ -37,7 +37,11 @@ class Rectangle(Base):
 
     def display(self):
         """print the visualization of the rectangle"""
+        for y in range(0, self.y):
+            print()
         for h in range(0, self.height):
+            for x in range(0, self.x):
+                print(" ", end="")
             for w in range(0, self.width):
                 print('#', end="")
             print("")
