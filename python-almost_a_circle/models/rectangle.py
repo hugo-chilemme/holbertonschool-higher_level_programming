@@ -34,7 +34,7 @@ class Rectangle(Base):
     def area(self):
         """Area: width * heigh"""
         return self.width * self.height
-    
+
     def display(self):
         """print the visualization of the rectangle"""
         for h in range(0, self.height):
