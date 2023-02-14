@@ -19,7 +19,9 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """Convert object to json"""
-        if not list_dictionaries or len(list_dictionaries) == 0 or type(list_dictionaries) is not list:
+        if type(list_dictionaries) is not list:
+            return "[]"
+        if not list_dictionaries or len(list_dictionaries) == 0:
             return "[]"
         return dumps(list_dictionaries)
 
