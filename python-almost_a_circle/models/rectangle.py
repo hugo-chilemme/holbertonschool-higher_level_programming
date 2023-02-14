@@ -47,6 +47,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args):
+        """that assigns an argument to each attribute:"""
         keys = ["id", "width", "height", "x", "y"]
         for k, v in enumerate(args):
             element = keys[k]
