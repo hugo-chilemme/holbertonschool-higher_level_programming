@@ -46,22 +46,27 @@ class Rectangle(Base):
                 print('#', end="")
             print("")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """that assigns an argument to each attribute:"""
-        keys = ["id", "width", "height", "x", "y"]
+        keys = ["width", "height", "x", "y", "id"]
+        values = {}
         for k, v in enumerate(args):
             element = keys[k]
-            if element:
-                if element == 'id':
-                    self.id = v
-                if element == 'width':
-                    self.width = v
-                if element == 'height':
-                    self.height = v
-                if element == 'x':
-                    self.x = v
-                if element == 'y':
-                    self.y = v
+            values[element] = v
+        if not args or len(args) == 0:
+            for k, v in kwargs.items():
+                values[k] = v
+        for k, v in values.items():
+            if k == "width":
+                self.width = v
+            if k == "height":
+                self.height = v
+            if k == "x":
+                self.x = v
+            if k == "y":
+                self.y = v
+            if k == "id":
+                self.id = v
 
     @width.setter
     def width(self, value):
