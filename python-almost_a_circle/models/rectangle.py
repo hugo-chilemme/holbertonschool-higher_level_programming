@@ -8,6 +8,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class rectangle inherit from Base"""
+    
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
@@ -73,3 +74,12 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def __str__(self):
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id,
+            self.x,
+            self.y,
+            self.width,
+            self.height
+        )
