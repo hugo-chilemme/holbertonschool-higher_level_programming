@@ -46,6 +46,22 @@ class Rectangle(Base):
                 print('#', end="")
             print("")
 
+    def update(self, *args):
+        keys = ["id", "width", "height", "x", "y"]
+        for k, v in enumerate(args):
+            element = keys[k]
+            if element:
+                if element == 'id':
+                    self.id = v
+                if element == 'width':
+                    self.width = v
+                if element == 'height':
+                    self.height = v
+                if element == 'x':
+                    self.x = v
+                if element == 'y':
+                    self.y = v
+
     @width.setter
     def width(self, value):
         if type(value) is not int:
