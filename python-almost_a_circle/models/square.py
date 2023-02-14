@@ -49,3 +49,13 @@ class Square(Rectangle):
                 self.y = v
             if k == "id":
                 self.id = v
+
+    def to_dictionary(self):
+        """Create object data"""
+        obj = {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
+        return obj
