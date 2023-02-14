@@ -68,6 +68,16 @@ class Rectangle(Base):
             if k == "id":
                 self.id = v
 
+    def to_dictionary(self):
+        obj = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
+        return obj
+
     @width.setter
     def width(self, value):
         if type(value) is not int:
