@@ -31,8 +31,8 @@ class Rectangle(Base):
     def y(self):
         return self.__y
 
-    """Area: width * heigh"""
     def area(self):
+        """Area: width * heigh"""
         return self.width * self.height
 
     @width.setter
