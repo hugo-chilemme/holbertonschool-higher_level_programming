@@ -25,4 +25,13 @@ class Base:
             return "[]"
         return dumps(list_dictionaries)
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        arr = []
+        for element in list_objs:
+            arr.append(element.to_dictionary())
+        with open(cls.__name__ + ".json", "w") as f:
+            f.write(cls.to_json_string(arr))
+
+Base.save_to_file = staticmethod(Base.save_to_file)
 Base.to_json_string = staticmethod(Base.to_json_string)
