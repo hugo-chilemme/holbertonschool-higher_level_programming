@@ -60,7 +60,7 @@ class Base:
             with open(cls.__name__+".json", "r") as f:
                 data = cls.from_json_string(f.read())
                 for element in data:
-                    list_obj.append(cls.create(element))
+                    list_obj.append(cls.create(**element))
             f.close()
         except:
             pass
