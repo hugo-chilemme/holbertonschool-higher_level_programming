@@ -43,3 +43,9 @@ class Base:
             return loads(json_string)
         except:
             return json_string
+
+    @classmethod
+    def create(cls, **dictionary):
+        clone = cls(1, 1)
+        clone.update(**dictionary)
+        return clone
