@@ -17,6 +17,7 @@ class Base:
         else:
             self.id = id
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Convert object to json"""
         if type(list_dictionaries) is not list:
@@ -32,6 +33,3 @@ class Base:
             arr.append(element.to_dictionary())
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(arr))
-
-Base.save_to_file = staticmethod(Base.save_to_file)
-Base.to_json_string = staticmethod(Base.to_json_string)
