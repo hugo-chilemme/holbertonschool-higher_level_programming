@@ -2,8 +2,8 @@
 """Class Base"""
 
 
-from json import dumps
-"""Import dumps to convert object to json"""
+from json import dumps, loads
+"""Import dumps to convert object to json and other side"""
 
 
 class Base:
@@ -34,3 +34,10 @@ class Base:
                 arr.append(element.to_dictionary())
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(arr))
+    
+    @staticmethod
+    def from_json_string(json_string):
+        try:
+            return loads(json_string)
+        except:
+            return json_string
