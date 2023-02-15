@@ -34,7 +34,7 @@ class Base:
                 arr.append(element.to_dictionary())
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(arr))
-    
+
     @staticmethod
     def from_json_string(json_string):
         if not json_string:
