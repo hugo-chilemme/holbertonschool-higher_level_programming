@@ -1,0 +1,89 @@
+#!/usr/bin/python3
+"""Rectanglecl test"""
+
+
+import unittest
+from models.rectangle import Rectangle
+
+
+class TestBase(unittest.TestCase):
+    def test_1(self):
+        Rectangle(1, 2)
+
+    def test_2(self):
+        Rectangle(1, 2, 3)
+
+    def test_3(self):
+        Rectangle(1, 2, 3, 4)
+
+    def test_4(self):
+        with self.assertRaises(TypeError) as context:
+            Rectangle("1", 2)
+        self.assertTrue('width must be an integer' in str(context.exception))
+
+    def test_5(self):
+        with self.assertRaises(TypeError) as context:
+            Rectangle(1, "2")
+        self.assertTrue('height must be an integer' in str(context.exception))
+
+    def test_6(self):
+        with self.assertRaises(TypeError) as context:
+            Rectangle(1, 2, "3")
+        self.assertTrue('x must be an integer' in str(context.exception))
+
+    def test_7(self):
+        with self.assertRaises(TypeError) as context:
+            Rectangle(1, 2, 3, "4")
+        self.assertTrue('y must be an integer' in str(context.exception))
+
+    def test_8(self):
+        Rectangle(1, 2, 3, 4, 5)
+
+    def test_9(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(-1, 2)
+        self.assertTrue('width must be > 0' in str(context.exception))
+
+    def test_10(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(1, -2)
+        self.assertTrue('height must be > 0' in str(context.exception))
+
+    def test_11(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(0, 2)
+        self.assertTrue('width must be > 0' in str(context.exception))
+
+    def test_12(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(1, 0)
+        self.assertTrue('height must be > 0' in str(context.exception))
+
+    def test_13(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(1, 2, -3)
+        self.assertTrue('x must be >= 0' in str(context.exception))
+
+    def test_14(self):
+        with self.assertRaises(ValueError) as context:
+            Rectangle(1, 2, 3, -4)
+        self.assertTrue('y must be >= 0' in str(context.exception))
+
+    def test_15(self):
+        Rectangle.create(**{ 'width': 2, 'height': 3 })
+
+    def test_16(self):
+        Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12 })
+
+    def test_17(self):
+        Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12, 'y': 1 })
+
+    def test_18(self):
+        Rectangle.create(**{ 'width': 2, 'height': 3, 'x': 12, 'y': 1, 'id': 89 })
+
+    def test_19(self):
+        Rectangle.load_from_file()
+
+    def test_20(self):
+        Rectangle.load_from_file()
+
