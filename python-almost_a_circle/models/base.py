@@ -38,7 +38,7 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         if not json_string:
-            return ""
+            return []
         try:
             return loads(json_string)
         except:
