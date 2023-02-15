@@ -46,6 +46,9 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        clone = cls(1, 1)
+        try:
+            clone = cls(1)
+        except:
+            clone = cls(1, 1)
         clone.update(**dictionary)
         return clone
