@@ -52,3 +52,16 @@ class Base:
             clone = cls(1, 1)
         clone.update(**dictionary)
         return clone
+
+    @classmethod
+    def load_from_file(cls):
+        list_obj = []
+        try:
+            with open(cls.__name__+".json", "r") as f:
+                data = cls.from_json_string(f.read())
+                for element in data:
+                    list_obj.append(cls.create(element))
+            f.close()
+        except:
+            pass
+        return list_obj
