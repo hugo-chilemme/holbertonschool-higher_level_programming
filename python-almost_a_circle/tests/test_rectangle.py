@@ -130,7 +130,10 @@ class TestBase(unittest.TestCase):
     def test_31(self):
         dt = Rectangle(1, 2, 3)
         dt.display()
-
+        
+    def test_32(self):
+        dt = Rectangle(1, 2)
+        dt.display()
 
 
         
