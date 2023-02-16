@@ -114,5 +114,23 @@ class TestBase(unittest.TestCase):
 
     def test_27(self):
         Rectangle.save_to_file(None)
+        
+    def test_28(self):
+        dt = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(dt.area(), 2)
+    
+    def test_29(self):
+        dt = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(str(dt), '[Rectangle] (5) 3/4 - 1/2')
+
+    def test_30(self):
+        dt = Rectangle(1, 2, 3, 4)
+        dt.display()
+        
+    def test_31(self):
+        dt = Rectangle(1, 2, 3)
+        dt.display()
+
+
 
         
