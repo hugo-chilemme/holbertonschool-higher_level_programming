@@ -88,7 +88,8 @@ class TestBase(unittest.TestCase):
         Rectangle.load_from_file()
     
     def test_21(self):
-        Rectangle.save_to_file([Rectangle(1, 2)])
+        dt = Rectangle(1, 2, 3 , 4 , 5)
+        dt.save_to_file([Rectangle(1, 2)])
 
     def test_22(self):
         Rectangle.save_to_file([])
