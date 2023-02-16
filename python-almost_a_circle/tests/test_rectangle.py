@@ -94,7 +94,8 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file([])
 
     def test_23(self):
-        Rectangle.save_to_file(None)
+        dt = Rectangle(1, 2, 3, 4, 5)
+        dt.save_to_file(None)
 
     def test_24(self):
         with self.assertRaises(AttributeError) as context:
