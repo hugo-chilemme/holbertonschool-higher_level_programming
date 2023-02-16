@@ -32,7 +32,7 @@ class TestBase(unittest.TestCase):
 		self.assertTrue('y must be an integer' in str(context.exception))
 
 	def test_6(self):
-		Square(1, 2, 3, 4)
+		dt = Square(1, 2, 3, 4)
 
 	def test_7(self):
 		with self.assertRaises(ValueError) as context:
@@ -125,3 +125,22 @@ class TestBase(unittest.TestCase):
 
 	def test_69(self):
 		Square.load_from_file()
+
+	def test_70(self):
+		Square.save_to_file(None)
+  
+	def test_71(self):
+		Square.save_to_file([])
+
+	def test_72(self):
+		Square.save_to_file([Square(1)])
+
+	def test_73(self):
+		with self.assertRaises(AttributeError) as context:
+			Square.__str__(self)
+		self.assertTrue("'TestBase' object has no attribute 'x'" in str(context.exception))
+
+	def test_74(self):
+		with self.assertRaises(AttributeError) as context:
+			Square.to_dictionary(self)
+		self.assertTrue("'TestBase' object has no attribute 'width'" in str(context.exception))

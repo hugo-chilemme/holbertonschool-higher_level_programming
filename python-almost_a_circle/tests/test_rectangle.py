@@ -86,4 +86,26 @@ class TestBase(unittest.TestCase):
 
     def test_20(self):
         Rectangle.load_from_file()
+    
+    def test_21(self):
+        Rectangle.save_to_file([Rectangle(1, 2)])
 
+    def test_22(self):
+        Rectangle.save_to_file([])
+
+    def test_23(self):
+        Rectangle.save_to_file(None)
+
+    def test_24(self):
+        with self.assertRaises(AttributeError) as context:
+            Rectangle.to_dictionary(self)
+        self.assertTrue("'TestBase' object has no attribute 'width'" in str(context.exception))
+
+    def test_25(self):
+        dt = Rectangle(10, 10)
+        dt.area()
+        
+    def test_26(self):
+        dt = Rectangle(1, 1)
+        dt.display()
+        
