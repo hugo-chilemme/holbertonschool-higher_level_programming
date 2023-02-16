@@ -33,6 +33,7 @@ class TestBase(unittest.TestCase):
 
 	def test_6(self):
 		dt = Square(1, 2, 3, 4)
+		self.assertTrue('[Square] (4) 2/3 - 1' in str(dt))
 
 	def test_7(self):
 		with self.assertRaises(ValueError) as context:
