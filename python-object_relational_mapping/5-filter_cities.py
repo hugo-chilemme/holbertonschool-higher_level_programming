@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+"""Lists all states with a name starting with N (upper N)"""
+
+
+import MySQLdb
+import sys
+
+
+if __name__ == "__main__":
+
+    db = MySQLdb.connect(
+        host='localhost',
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
+        port=3306
+    )
+
+    cur = db.cursor()
+    cur.execute("""SELECT cities.name FROM cities\
+    INNER JOIN states ON states.id = cities.state_id\
+    WHERE states.name = % s\
+    GROUP BY cities.name\
+    ORDER BY cities.id""", (sys.argv[4],))
+
+    rows = cur.fetchall()
+    
+    cities = []
+    for row in rows:
+        cities.append(row[0])
+        
+    print("{}".format(', '.join(cities)))
+    cur.close()
+    db.close()
