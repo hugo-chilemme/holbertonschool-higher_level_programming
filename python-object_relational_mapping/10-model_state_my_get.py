@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     state_name = State.name.like(sys.argv[4])
     state = session.query(State).filter(state_name).first()
-    
+
     if state:
         print(f'{state.id}')
     else:
