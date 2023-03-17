@@ -7,6 +7,8 @@ import sys
 
 
 if __name__ == "__main__":
+    
+    
     db = MySQLdb.connect(
         host='localhost',
         user=sys.argv[1],
@@ -16,8 +18,8 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states WHERE name \
-                = % s ORDER BY states.id ASC""", (sys.argv[4],))
+    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
+    INNER JOIN states ON cities.state_id = states.id")
 
     rows = cur.fetchall()
     for row in rows:
