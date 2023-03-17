@@ -24,7 +24,7 @@ if __name__ == "__main__":
         INNER JOIN states ON states.id = cities.state_id\
         WHERE states.name = % s\
         GROUP BY cities.name\
-        ORDER BY cities.id""", (sys.argv[4],))
+        ORDER BY cities.name""", (sys.argv[4],))
 
         rows = cur.fetchall()
         
