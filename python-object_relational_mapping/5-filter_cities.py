@@ -16,18 +16,20 @@ if __name__ == "__main__":
         port=3306
     )
 
-    cur = db.cursor()
-    cur.execute("""SELECT cities.name FROM cities\
-    INNER JOIN states ON states.id = cities.state_id\
-    WHERE states.name = % s\
-    GROUP BY cities.name\
-    ORDER BY cities.id""", (sys.argv[4],))
-
-    rows = cur.fetchall()
-    
     cities = []
-    for row in rows:
-        cities.append(row[0])
+    cur = db.cursor()
+    if len(sys.argv) == 5:
+       
+        cur.execute("""SELECT cities.name FROM cities\
+        INNER JOIN states ON states.id = cities.state_id\
+        WHERE states.name = % s\
+        GROUP BY cities.name\
+        ORDER BY cities.id""", (sys.argv[4],))
+
+        rows = cur.fetchall()
+        
+        for row in rows:
+            cities.append(row[0])
         
     print("{}".format(', '.join(cities)))
     cur.close()
