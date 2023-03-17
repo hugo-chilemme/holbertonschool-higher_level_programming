@@ -16,8 +16,8 @@ if __name__ == "__main__":
     )
 
     cur = db.cursor()
-    cur.execute("""SELECT * FROM states WHERE name LIKE = %s"""
-                (sys.argv[4]))
+    cur.execute("""SELECT * FROM states WHERE name \
+                = % s ORDER BY states.id ASC""", (sys.argv[4],))
 
     rows = cur.fetchall()
     for row in rows:
