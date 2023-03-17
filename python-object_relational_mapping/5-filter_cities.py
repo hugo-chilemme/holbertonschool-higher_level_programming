@@ -19,17 +19,14 @@ if __name__ == "__main__":
     cities = []
     cur = db.cursor()
     if len(sys.argv) == 5:
-       
         cur.execute("""SELECT cities.name FROM states\
         INNER JOIN cities ON states.id = cities.state_id\
         WHERE states.name = % s\
         ORDER BY cities.id""", (sys.argv[4],))
 
         rows = cur.fetchall()
-        
         for row in rows:
             cities.append(row[0])
-        
     print("{}".format(', '.join(cities)))
     cur.close()
     db.close()
