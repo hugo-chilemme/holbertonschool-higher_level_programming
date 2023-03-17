@@ -1,0 +1,17 @@
+# Python - Object-relational mapping
+
+- [0. Write a script that lists all states from the database hbtn_0e_0_usa:](0-select_states.py)
+- [1. Write a script that lists all states with a name starting with N (upper N) from the database hbtn_0e_0_usa:](1-filter_states.py)
+- [2. Write a script that takes in an argument and displays all values in the states table of hbtn_0e_0_usa where name matches the argument.](2-my_filter_states.py)
+- [3. Wait, do you remember the previous task? Did you test "Arizona'; TRUNCATE TABLE states ; SELECT * FROM states WHERE name = '" as an input?](3-my_safe_filter_states.py)
+- [4. Write a script that lists all cities from the database hbtn_0e_4_usa](4-cities_by_state.py)
+- [5. Write a script that takes in the name of a state as an argument and lists all cities of that state, using the database hbtn_0e_4_usa](5-filter_cities.py)
+- [6. ](model_state.py)
+- [7. Write a script that lists all State objects from the database hbtn_0e_6_usa](7-model_state_fetch_all.py)
+- [8. Write a script that prints the first State object from the database hbtn_0e_6_usa](8-model_state_fetch_first.py)
+- [9. Write a script that lists all State objects that contain the letter a from the database hbtn_0e_6_usa](9-model_state_filter_a.py)
+- [10. Write a script that prints the State object with the name passed as argument from the database hbtn_0e_6_usa](10-model_state_my_get.py)
+- [11. Write a script that adds the State object “Louisiana” to the database hbtn_0e_6_usa](11-model_state_insert.py)
+- [12. Write a script that changes the name of a State object from the database hbtn_0e_6_usa](12-model_state_update_id_2.py)
+- [13. Write a script that deletes all State objects with a name containing the letter a from the database hbtn_0e_6_usa](13-model_state_delete_a.py)
+- 14\. Write a Python file similar to model_state.py named model_city.py that contains the class definition of a City. [model_city.py](model_city.py) [14-model_city_fetch_by_state.py](14-model_city_fetch_by_state.py)
