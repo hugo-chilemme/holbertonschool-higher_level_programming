@@ -5,9 +5,9 @@
  * Create script to display a square with a 'X'
  */
 const args = process.argv.slice(2);
-const SIZE = args[0];
+const SIZE = parseInt(args[0]);
 
-if ( SIZE ) {
+if ( SIZE && !isNaN(SIZE)) {
     
     // Creating a line with @SIZE 'X'
     const line = 'X'.repeat(SIZE);
