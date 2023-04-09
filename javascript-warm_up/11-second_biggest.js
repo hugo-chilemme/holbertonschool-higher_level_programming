@@ -6,11 +6,16 @@
  */
 const args = process.argv.slice(2);
 
-const maximum = (numbers = []) => {
-  if (numbers.length === 0) {
+const maximum = (array = []) => {
+  const numbers = [];
+  for (let i = 0; i < array.length; i++) {
+    numbers.push(parseInt(array[i]));
+  }
+  numbers.sort((a, b) => a - b);
+  if (numbers.length < 2) {
     return 0;
   }
-  return Math.max(...numbers);
+  return numbers[numbers.length - 2];
 };
 
 console.log(maximum(args));
