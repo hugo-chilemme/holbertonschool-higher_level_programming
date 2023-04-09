@@ -31,8 +31,8 @@ class Rectangle {
     print() {
 
         // In case initialization failed
-        const width = self.width || 0;
-        const height = self.height || 0;
+        const width = this.width || 0;
+        const height = this.height || 0;
 
         // Creation of a line template
         const line = 'X'.repeat(width);
@@ -40,7 +40,7 @@ class Rectangle {
         // Display of @h line
         for (let h = 0; h < height; h++)
         {
-            
+
             console.log(line);
 
         }
