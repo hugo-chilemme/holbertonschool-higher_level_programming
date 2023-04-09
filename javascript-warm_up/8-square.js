@@ -7,7 +7,7 @@
 const args = process.argv.slice(2);
 const SIZE = args[0];
 
-if ( SIZE && SIZE > 0 ) {
+if ( SIZE ) {
     
     // Creating a line with @SIZE 'X'
     const line = 'X'.repeat(SIZE);
@@ -16,4 +16,8 @@ if ( SIZE && SIZE > 0 ) {
     for ( let nline = 0 ; nline < SIZE ; nline++ )
         console.log(line);
 
+}
+else
+{
+    console.log('Missing size');
 }
