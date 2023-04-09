@@ -14,4 +14,6 @@ const factorial = number => {
   return number * factorial(number - 1);
 };
 
-console.log(factorial(number1));
+if (number1 && !isNaN(number1)) {
+  console.log(factorial(number1));
+}
