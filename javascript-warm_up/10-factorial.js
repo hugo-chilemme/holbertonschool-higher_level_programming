@@ -8,12 +8,10 @@ const args = process.argv.slice(2);
 const number1 = parseInt(args[0]);
 
 const factorial = number => {
-  if (number === 0) {
+  if (number === 0 || !number) {
     return 1;
   }
   return number * factorial(number - 1);
 };
 
-if (number1 && !isNaN(number1)) {
-  console.log(factorial(number1));
-}
+console.log(factorial(number1));
