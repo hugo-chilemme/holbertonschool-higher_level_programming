@@ -1,11 +1,12 @@
 #!/usr/bin/node
 'use strict';
 
+
 /**
  * nbOccurences
  * @param {array} list - List of elements
  * @param {char} searchElement = Element to search
- * nbOccurences([1, 2, 3], 3)
+ * @exemple nbOccurences([1, 2, 3], 3)
  */
 exports.nbOccurences = (list, searchElement) => {
     let occurrences = 0;
@@ -13,7 +14,7 @@ exports.nbOccurences = (list, searchElement) => {
     for ( const element of list )
     {
 
-        if ( element == searchElement )
+        if ( element === searchElement )
         {
 
             occurrences += 1;
