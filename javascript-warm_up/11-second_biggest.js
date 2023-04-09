@@ -7,9 +7,10 @@
 const args = process.argv.slice(2);
 
 const maximum = (numbers = []) => {
-  if (numbers.length === 0)
-    return 0
-  return Math.max(...numbers)
+  if (numbers.length === 0) {
+    return 0;
+  }
+  return Math.max(...numbers);
 };
 
 console.log(maximum(args));
