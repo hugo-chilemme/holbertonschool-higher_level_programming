@@ -34,12 +34,24 @@ class Square extends Rectangle {
     
     /**
      * charPrint()
-     * @param {char} c  
+     * @param {char} char  
      * Displays the square with this character
      */
-    charPrint(c = "X") {
+    charPrint(char = "X") {
 
-        this.print(c);
+        // In case initialization failed
+        const size = this.width || 0;
+
+        // Creation of a line template
+        const line = char.repeat(size);
+
+        // Display of @h line
+        for (let s = 0; s < size; s++)
+        {
+
+            console.log(line);
+
+        }
 
     }
 

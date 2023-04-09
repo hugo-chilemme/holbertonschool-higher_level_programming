@@ -34,14 +34,14 @@ class Rectangle {
      * print()
      * Displays a rectangle with 'X'
      */
-    print(char = "X") {
+    print() {
 
         // In case initialization failed
         const width = this.width || 0;
         const height = this.height || 0;
 
         // Creation of a line template
-        const line = char.repeat(width);
+        const line = 'X'.repeat(width);
 
         // Display of @h line
         for (let h = 0; h < height; h++)
