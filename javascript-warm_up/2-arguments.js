@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const arguments = process.argv.slice(2);
 
 if (arguments.length === 0)
