@@ -2,12 +2,12 @@
 'use strict';
 
 
-const Rectangle = require('./4-rectangle');
+const oldSquare = require('./5-square.js');
 
 /**
  * class Square
  */
-class Square extends Rectangle {
+class Square extends oldSquare {
     
 
     /**
