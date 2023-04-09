@@ -9,10 +9,6 @@
  */
 exports.converter = base => {
     
-    return number => {
-
-        return parseInt(number, base);
-
-    }
+    return number => number.toString(base);
 
 }
