@@ -9,12 +9,10 @@
  */
 exports.converter = base => {
     
-    const convert_base = number => {
+    return number => {
 
         return parseInt(number, base);
 
     }
-    
-    return convert_base;
 
 }
