@@ -2,7 +2,12 @@
 'use strict';
 
 /**
- * Display @firstArg is @secondArg in a console
+ * main
+ * Create a script to display @firstArg is @secondArg
  */
-const args = process.argv.slice(2);
-console.log(args[0] + ' is ' + args[1]);
+function main () {
+  const args = process.argv.slice(2);
+  console.log(args[0] + ' is ' + args[1]);
+}
+
+main();

@@ -2,14 +2,20 @@
 'use strict';
 
 /**
- * Show as many times 'C is fun' that it is said
+ * main
+ * Create script to display multiples lines by a array
  */
-const args = process.argv.slice(2);
+function main () {
+  const args = process.argv.slice(2);
 
-if (!args[0]) {
-  console.log('Missing number of occurrences');
-} else {
+  if (!args[0]) {
+    console.log('Missing number of occurrences');
+    return;
+  }
+
   for (let i = 0; i < parseInt(args[0]); i++) {
     console.log('C is fun');
   }
 }
+
+main();

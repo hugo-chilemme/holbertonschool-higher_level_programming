@@ -2,19 +2,22 @@
 'use strict';
 
 /**
- * Create script to display a square with a 'X'
+ * main
+ * Create a script to display square with @SIZE
  */
-const args = process.argv.slice(2);
-const SIZE = parseInt(args[0]);
+function main () {
+  const SIZE = parseInt(process.argv[2]);
 
-if (SIZE && !isNaN(SIZE)) {
-  // Creating a line with @SIZE 'X'
-  const line = 'X'.repeat(SIZE);
+  if (SIZE && !isNaN(SIZE)) {
+    const line = 'X'.repeat(SIZE);
 
-  // Creating a line with so many Xs
-  for (let nline = 0; nline < SIZE; nline++) {
-    console.log(line);
+    for (let nline = 0; nline < SIZE; nline++) {
+      console.log(line);
+    }
+    return;
   }
-} else {
+
   console.log('Missing size');
 }
+
+main();

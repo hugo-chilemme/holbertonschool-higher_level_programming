@@ -2,7 +2,13 @@
 'use strict';
 
 /**
- * Display @myVar in a console
+ * main
+ * Create script that display @myVar in a console
  */
-const myVar = 'JavaScript is amazing';
-console.log(myVar);
+function main () {
+  const myVar = 'JavaScript is amazing';
+
+  console.log(myVar);
+}
+
+main();

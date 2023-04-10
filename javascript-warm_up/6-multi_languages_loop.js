@@ -2,14 +2,17 @@
 'use strict';
 
 /**
- * Show multiple rows in a console only with array
+ * main
+ * Create script to display multiples lines by a array
  */
-const lines = [
-  'C is fun',
-  'Python is cool',
-  'JavaScript is amazing'
-];
+function main () {
+  const lines = [
+    'C is fun',
+    'Python is cool',
+    'JavaScript is amazing'
+  ];
 
-// We return to the line at each element of the array
-const result = lines.join('\n');
-console.log(result);
+  console.log(lines.join('\n'));
+}
+
+main();

@@ -2,14 +2,19 @@
 'use strict';
 
 /**
- * Display 'My number: @arg' if it is a number
+ * main
+ * Create script to display My number: @number if it is a number
  */
-const args = process.argv.slice(2);
-const number = parseInt(args[0]);
+function main () {
+  const number = parseInt(process.argv[2]);
 
-// When number is a digit
-if (isNaN(number)) {
-  console.log('Not a number');
-} else {
-  console.log(`My number: ${parseInt(args[0])}`);
+  // When number is a digit
+  if (isNaN(number)) {
+    console.log('Not a number');
+    return;
+  }
+
+  console.log(`My number: ${number}`);
 }
+
+main();

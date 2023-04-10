@@ -8,10 +8,10 @@ const Rectangle = require('./4-rectangle');
  */
 class Square extends Rectangle {
   /**
-     * constructor
-     * @param {number} size - Size
-     * new Square(2);
-     */
+   * constructor
+   * @param {number} size - Size
+   * new Square(2);
+   */
   constructor (size) {
     super();
     // When rectangle values are valid
