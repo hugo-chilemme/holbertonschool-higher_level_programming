@@ -12,7 +12,11 @@ function main () {
     'JavaScript is amazing'
   ];
 
-  console.log(lines.join('\n'));
+  // console.log(lines.join('\n'));
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    console.log(line);
+  }
 }
 
 main();
