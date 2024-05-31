@@ -17,6 +17,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
 			self.wfile.write(b'Hello, this is a simple API!')
 
+			return
+
 		
 		if self.path == '/data':
 
@@ -27,6 +29,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 			self.end_headers()
 
 			self.wfile.write(b'{"name": "John", "age": 30, "city": "New York"}')
+
+			return
 
 
 		if self.path == '/status':
@@ -39,6 +43,16 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
 			self.wfile.write(b'OK')
 
+			return
+
+
+		self.send_response(404) 
+
+		self.send_header('Content-type', 'text/plain')
+
+		self.end_headers()
+
+		self.wfile.write(b'Not found')
 
 		
 
