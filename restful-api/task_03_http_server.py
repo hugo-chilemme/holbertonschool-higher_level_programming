@@ -52,7 +52,7 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
 		self.end_headers()
 
-		self.wfile.write(b'Endpoint not found')
+		self.wfile.write(b'404 Not Found')
 
 		
 
