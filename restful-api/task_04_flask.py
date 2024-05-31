@@ -38,7 +38,7 @@ def add_user():
 
 	data = request.json
 
-	if data.get('username') is None:
+	if data is None or data.get('username') is None:
 
 		return jsonify({'error': 'Missing username parameters'})
 
