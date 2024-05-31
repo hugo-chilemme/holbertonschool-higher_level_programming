@@ -10,7 +10,11 @@ def fetch_posts():
 
 	if response.status_code == 200:
 
+		print("Status Code: {}".format(response.status_code))
+		
 		return response
+	
+	return None
 
 
 
@@ -18,7 +22,8 @@ def fetch_and_print_posts():
 	
 	response = fetch_posts()
 
-	print("Status Code: {}".format(response.status_code))
+	if response is None:
+		return None
 
 	posts = response.json()
 
@@ -32,6 +37,9 @@ def fetch_and_print_posts():
 def fetch_and_save_posts():
 
 	response = fetch_posts()
+	
+	if response is None:
+		return None
 
 	posts = response.json()
 
