@@ -8,14 +8,13 @@ def fetch_posts():
 
 	response = requests.get(API_URL)
 
-	if response.status_code != 200:
+	if response.status_code == 200:
 
-		exit(response.status_code)
-
-	return response
+		return response
 
 
-def fetch_and_print_posts(print_posts = True):
+
+def fetch_and_print_posts():
 	
 	response = fetch_posts()
 
