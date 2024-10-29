@@ -18,7 +18,7 @@ class Circle(Shape):
     def __init__(self, radius):
 
         if radius <= 0:
-            raise ValueError("Perimeter should handle negative radius")
+            return ValueError("Radius must be positive")
 
         self.__radius = radius
 
